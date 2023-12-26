@@ -12,7 +12,6 @@ require_once __DIR__ . '/../classes/Register.php';
 $nickname = $_POST['nickname'];
 $password = $_POST['password'];
 $password_confirm = $_POST['confirmPassword'];
-$avatar = $_FILES['avatar'];
 $config = include_once __DIR__ . '/../config.php';
 
 
@@ -21,5 +20,5 @@ $db = new DataBase($config['DB_HOST'], $config['DB_NAME'], $config['DB_USERNAME'
 
 $reg->validate();
 $db->connect();
-$db->uploadAvatar();
 $db->createUser();
+$db->uploadAvatar();

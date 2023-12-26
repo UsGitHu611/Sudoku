@@ -39,7 +39,7 @@ class DataBase
         $params = array(
             'nickname' => $_POST['nickname'],
             'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
-            'avatar' => time() . "_" . $_FILES['avatar']['name']
+            'avatar' => $_FILES['avatar']['size'] > 0 ? time() . "_" . $_FILES['avatar']['name'] : 'defaultAvatar.svg'
         );
         $statement = $this->connect()->prepare($query);
 

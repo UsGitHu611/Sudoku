@@ -16,7 +16,7 @@
         <div class="profile">
 
             <div class="img-mask">
-                <img src="../src/images/<?= getImage(); ?>" alt="user-avatar">
+                <img src="../src/images/<?= getImage()  ?>" alt="user-avatar">
             </div>
 
             <div class="info-user">

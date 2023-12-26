@@ -39,6 +39,6 @@
 
     function logout(): void
     {
-    unset($_SESSION['user']['id']);
-    header('Location: /');
+        unset($_SESSION['user']['id']);
+        header('Location: /');
     }
